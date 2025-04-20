@@ -23,18 +23,18 @@ pip install -r requirements.txt
 ```
 
 requirements.txt includes:
-  -**requests**
-  -**beautifulsoup4**
-  -**lxml**
-  -**pandas**
-  -**fake-useragent**
+  - **requests**
+  - **beautifulsoup4**
+  - **lxml**
+  - **pandas**
+  - **fake-useragent**
 
 ## ▶️ How to Use
 
-  -**Clone or download this repository.**
-  -**Choose a category by entering the corresponding letter.**
-  -**Enter how many pages you want to scrape.**
-  -**After scraping, the data will be saved in the output/ directory as a timestamped .csv file.**
+  - **Clone or download this repository.**
+  - **Choose a category by entering the corresponding letter.**
+  - **Enter how many pages you want to scrape.**
+  - **After scraping, the data will be saved in the output/ directory as a timestamped .csv file.**
 
 ## 📁 Output Example
 A sample row in the output CSV:
