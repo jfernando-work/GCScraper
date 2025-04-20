@@ -1,8 +1,8 @@
-# 🎸 Musical Instrument Retailer - Used Gear Scraper
+# Musical Instrument Retailer - Used Gear Scraper
 
 This is a Python-based web scraper that collects product listings from a popular musical instrument retailer's website. It allows users to interactively select a product category and the number of pages to scrape, then outputs detailed product information to a CSV file.
 
-## 🔍 Features
+## Features
 
 - Category selection (e.g., Guitars, Drums, Keyboards, etc.)
 - User-defined number of pages to scrape
@@ -14,7 +14,7 @@ This is a Python-based web scraper that collects product listings from a popular
   - **Product Image URL**
 - Saves results as a `.csv` file in the `output` folder
 
-## 🛠️ Requirements
+## Requirements
 
 Install required libraries with:
 
@@ -29,14 +29,14 @@ requirements.txt includes:
   - **pandas**
   - **fake-useragent**
 
-## ▶️ How to Use
+## How to Use
 
   - **Clone or download this repository.**
   - **Choose a category by entering the corresponding letter.**
   - **Enter how many pages you want to scrape.**
   - **After scraping, the data will be saved in the output/ directory as a timestamped .csv file.**
 
-## 📁 Output Example
+## Output Example
 A sample row in the output CSV:
 
 
@@ -45,6 +45,6 @@ A sample row in the output CSV:
 | Used Fender Strat	|       $599	      |    Portland, OR   |	      Great       |          /image/...jpg         |
 
 
-## ⚠️ Notes
+## Notes
 Be respectful with your scraping. The script includes randomized delays to avoid hammering the site with requests.
 This scraper is intended for educational and personal use.
