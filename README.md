@@ -18,7 +18,7 @@ This is a Python-based web scraper that collects product listings from a popular
 
 Install required libraries with:
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
