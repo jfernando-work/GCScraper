@@ -124,7 +124,7 @@ for page in range(1, num_pages + 1):
 
 df = pd.DataFrame(data)
 
-engine = create_engine("postgresql://jfernando:npg_3pLbz7nCUVBY@ep-silent-pond-a5fqrhcs-pooler.us-east-2.aws.neon.tech/gc_items?sslmode=require")
+engine = create_engine("postgresql://neondb_owner:npg_fv1tZsePnuK2@ep-silent-pond-a5fqrhcs-pooler.us-east-2.aws.neon.tech/gc_items?sslmode=require")
 
 #filename = f"../output/gc_data_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv"
 #df.to_csv(filename, index=False)
