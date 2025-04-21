@@ -5,6 +5,7 @@ import time
 from datetime import datetime
 import random
 from fake_useragent import UserAgent
+from sqlalchemy import create_engine
 
 titles = []
 prices = []
@@ -123,5 +124,9 @@ for page in range(1, num_pages + 1):
 
 df = pd.DataFrame(data)
 
-filename = f"../output/gc_data_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv"
-df.to_csv(filename, index=False)
+engine = create_engine("postgresql://jfernando:npg_3pLbz7nCUVBY@ep-silent-pond-a5fqrhcs-pooler.us-east-2.aws.neon.tech/gc_items?sslmode=require")
+
+#filename = f"../output/gc_data_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.csv"
+#df.to_csv(filename, index=False)
+
+df.to_sql('listings', engine, if_exists='replace', index=False)
