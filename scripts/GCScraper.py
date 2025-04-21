@@ -90,8 +90,8 @@ for page in range(1, num_pages + 1):
     img_tag = soup.find_all('img', class_='w-full h-auto')
     image_url = [img.get('src') for img in img_tag if img.get('src')]
 
-    a_tag = soup.find_all('a', class_='jsx-8d67788d5172641a w-[128px] mt-5 md:mt-0')
-    listing_url = [a.get('href') for a in a_tag if a.get('href')]
+    a_tag = soup.find_all('a', title='product img')
+    listing_url = ['https://www.guitarcenter.com' + a.get('href') for a in a_tag if a.get('href')]
 
     conditions_raw = soup.find_all('p', class_='jsx-8bbe5b09d939d3ef')
     conditions = [
