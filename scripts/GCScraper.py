@@ -11,6 +11,7 @@ prices = []
 stores = []
 conditions = []
 image_url = []
+listing_url = []
 data = []
 
 # categories
@@ -89,6 +90,9 @@ for page in range(1, num_pages + 1):
     img_tag = soup.find_all('img', class_='w-full h-auto')
     image_url = [img.get('src') for img in img_tag if img.get('src')]
 
+    a_tag = soup.find_all('a', class_='jsx-8d67788d5172641a w-[128px] mt-5 md:mt-0')
+    listing_url = [a.get('href') for a in a_tag if a.get('href')]
+
     conditions_raw = soup.find_all('p', class_='jsx-8bbe5b09d939d3ef')
     conditions = [
         c.contents[-1].strip()
@@ -99,20 +103,22 @@ for page in range(1, num_pages + 1):
     time.sleep(random.uniform(2, 5)) 
 
     # check lists to make sure the lengths match
-    for i in range(min(len(titles), len(prices), len(stores), len(conditions), len(image_url))):
+    for i in range(min(len(titles), len(prices), len(stores), len(conditions), len(image_url), len(listing_url))):
         title = titles[i].get_text(strip=True)
         if title.startswith(('Used', 'New', 'Vintage')):
             price = prices[i].get_text(strip=True)
             store = stores[i].get_text(strip=True)
             condition = conditions[i]
             image = image_url[i]
+            link = listing_url[i]
 
             data.append({
                 'Title': title,
                 'Price': price,
                 'Store': store,
                 'Condition': condition,
-                'Image': image
+                'Image': image,
+                'Link': link
             })
 
 df = pd.DataFrame(data)
