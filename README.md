@@ -12,6 +12,7 @@ This is a Python-based web scraper that collects product listings from a popular
   - **Store Location**
   - **Condition**
   - **Product Image URL**
+  - **Product Link URL**
 - Saves results as a `.csv` file in the `output` folder
 
 ## Requirements
@@ -42,7 +43,7 @@ A sample row in the output CSV:
 
 |       Title       |       Price       |       Store       |     Condition     |              Image             |
 |-------------------|-------------------|-------------------|-------------------|--------------------------------|
-| Used Fender Strat	|       $599	      |    Portland, OR   |	      Great       |          /image/...jpg         |
+| Used Fender Strat	|       $599	      |    Portland, OR   |	      Great       | https://gc.com/image/guitar.jpg|
 
 
 ## Notes
